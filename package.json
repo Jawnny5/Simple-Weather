@@ -8,7 +8,9 @@
     "eject": "expo eject"
   },
   "dependencies": {
+    "@types/react-native": "^0.64.10",
     "expo": "~41.0.1",
+    "expo-location": "~12.0.4",
     "expo-status-bar": "~1.0.4",
     "react": "16.13.1",
     "react-dom": "16.13.1",
