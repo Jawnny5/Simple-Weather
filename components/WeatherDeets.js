@@ -12,9 +12,15 @@ export default function WeatherDeets({ currentWeather }) {
   return (
     <View style={styles.details}>
       <View style={styles.detailsRow}>
-        <Text style={{fontSize: 16}}>{ humidity }</Text>
-        <Text style={{fontSize: 16}}>{ feels_like }</Text>
-        <Text style={{fontSize: 16}}>{ wind_speed }</Text>
+        <View style={{...styles.detailsRowBox, borderRightWidth: 1, borderRightColor: BORDER_COLOR}}>
+          <Text><Text style={{fontWeight:'700'}}>RH:</Text> { humidity }</Text>
+        </View>
+        <View style={{...styles.detailsRowBox, borderRightWidth: 1, borderRightColor: BORDER_COLOR}}>
+          <Text><Text style={{fontWeight:'700'}}>Feels Like:</Text> { feels_like }</Text>
+        </View>
+        <View style={{...styles.detailsRowBox, borderRightWidth: 1, borderRightColor: BORDER_COLOR}}>
+          <Text><Text style={{fontWeight:'700'}}>Wind Speed:</Text> { wind_speed }m/s</Text>
+        </View>
       </View>
     </View>
   )
@@ -28,10 +34,12 @@ const styles = StyleSheet.create({
     borderRadius: 10
   }, 
   detailsRow: {
-    marginLeft: 30,
-    marginRight: 30,
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
+    margin: 'auto',
+  },
+  detailsRowBox: {
+    padding: 10,
   }
 })
