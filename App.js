@@ -8,9 +8,8 @@ import WeatherDeets from './components/WeatherDeets';
 import UnitsPicker from './components/UnitsPicker'
 import { colors } from './utils';
 import ReloadButton from './components/ReloadButton';
+import { WEATHER_KEY } from '@env'
 
-
-const WEATHER_KEY = 'ac1015366220c6a0a90c676bca30c91e'
 const BASE_W_URL = 'https://api.openweathermap.org/data/2.5/onecall?'
 
 export default function App() {
