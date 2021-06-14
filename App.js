@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import * as Location from 'expo-location'
 import { LocationEventEmitter } from 'expo-location/build/LocationEventEmitter';
+import WeatherInfo from './components/WeatherInfo';
 
 const WEATHER_KEY = 'ac1015366220c6a0a90c676bca30c91e'
 const BASE_W_URL = 'https://api.openweathermap.org/data/2.5/onecall?'
@@ -54,7 +55,7 @@ export default function App() {
       <View style={styles.container}>
         <StatusBar style="auto" />
         <View style={styles.main}>
-          <Text>{ temp }</Text>
+         <WeatherInfo currentWeather={currentWeather}/>
         </View>
        
       </View>
